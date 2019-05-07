@@ -1,4 +1,7 @@
+
 import click
+import csv
+import sys
 
 def import_db():
 
@@ -22,6 +25,25 @@ def import_db():
     output = "The database is in " + db_types.get(db_type, "Invalid Type") + " Format"
     print(output)
     # Parse according to answer
+    return db_type, database_location
+
+def convert(db_t, db_location):
+
+    with open(db_location) as db_file:
+        if db_t == 1:
+            #placeholder
+        elif db_t == 2:
+            #placeholder
+        else:
+            #placeholder
+
+def convert_csv(db_t, db_location):
+    #placeholder
+
+def convert_json(db_t, db_location):
+    #placeholder
+
 
 if __name__ == '__main__':
-    import_db()
+    click.echo('Importing the database...')
+    db_type, db_loc = import_db()
