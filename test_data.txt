@@ -1,0 +1,61 @@
+# Example Credential Dump (Test Data)
+# This file contains various formats of credential entries for testing
+
+# Format 1: email:password
+user1@example.com:password123
+admin@test.com:secretPass!
+john.doe@company.org:MyP@ssw0rd
+
+# Format 2: email:hash (MD5)
+user2@example.com:5f4dcc3b5aa765d61d8327deb882cf99
+admin2@test.com:098f6bcd4621d373cade4e832627b4f6
+
+# Format 3: username:password
+john_doe:secretpass
+admin_user:adminpass123
+test.user:testpass
+
+# Format 4: email|username|password
+user3@example.com|user3|password456
+admin3@test.com|admin3|admin123
+
+# Format 5: email:username:hash (SHA1)
+user4@example.com:user4:5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8
+test@example.com:testuser:aaf4c61ddcc5e8a2dabede0f3b482cd9aea9434d
+
+# Format 6: With separators and noise
+=====================================
+Database Dump - 2023-01-15
+=====================================
+
+email@example.com:somepassword
+another@test.com:anotherpass
+
+# More formats with special characters
+user-5@example.com:p@ss!word#5
+user_6@test.org:pass-word_6
+
+# Format 7: Tab separated
+user7@example.com	username7	password7
+user8@test.com	username8	password8
+
+# Format 8: SHA256 hashes
+user9@example.com:5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8
+user10@test.com:6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b
+
+# Some garbage lines to filter
+@@@@@@@@@@@@@@@@@
+This is not a credential
+Random text that should be ignored
+
+# Format 9: Multiple delimiters
+test11@example.com -- password11
+test12@test.com == password12
+
+# Format 10: bcrypt hashes
+user13@example.com:$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy
+user14@test.com:$2y$12$GhCJjkLLmvXe7l/P6k9sLOy5E8D3q8vBjC5zFdL3n1Xp6j1D1rGk.
+
+====================================
+End of dump
+====================================

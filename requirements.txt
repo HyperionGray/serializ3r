@@ -1,0 +1,2 @@
+# Core dependencies for serializ3r ML normalizer
+click>=8.0.0
