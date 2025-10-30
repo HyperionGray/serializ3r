@@ -351,7 +351,7 @@ cat output.jsonl | jq -r 'select(.password != null) | .password'
 
 - Use batch processing for multiple files
 - Set appropriate confidence thresholds
-- Process large files will stream automatically
+- Large files will stream automatically during processing
 - Monitor memory usage with very large dumps (>1GB)
 - Use parallel batch processing for massive datasets
 
